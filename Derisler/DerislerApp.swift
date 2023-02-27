@@ -11,7 +11,7 @@ import SwiftUI
 struct DerislerApp: App {
     var body: some Scene {
         WindowGroup {
-            TabBar()
+            ContentView()
         }
     }
 }

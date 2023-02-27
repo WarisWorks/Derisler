@@ -16,7 +16,7 @@ struct NavigationVar: View {
                 .background(.ultraThinMaterial)
                 .blur(radius: 10)
             
-            Text("ئىقتىدارلار")
+            Text(title)
                 .font(.custom("UKIJ Tuz Tom", size: 33))
                 .frame(maxWidth: .infinity, alignment: .trailing)
             .padding(.trailing, 20)
@@ -28,6 +28,6 @@ struct NavigationVar: View {
 
 struct NavigationVar_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationVar()
+        NavigationVar(title: "ئىقتىدارلىرى")
     }
 }

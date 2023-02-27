@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FeaturedItem: View {
+    
     var body: some View {
         VStack(alignment: .trailing, spacing: 8) {
             Spacer()
