@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5984EBBC29AC548900599FD1 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984EBBB29AC548900599FD1 /* FeaturedItem.swift */; };
+		5984EBBE29AC566A00599FD1 /* NavigationVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984EBBD29AC566A00599FD1 /* NavigationVar.swift */; };
 		59F8EBAC28B5B50E008CDCB1 /* HexagonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8EBAB28B5B50E008CDCB1 /* HexagonView.swift */; };
 		59F8EBAE28B5BCA7008CDCB1 /* BlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8EBAD28B5BCA7008CDCB1 /* BlobView.swift */; };
 		59F8EBB028B5D77F008CDCB1 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F8EBAF28B5D77E008CDCB1 /* TabBar.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5984EBBB29AC548900599FD1 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
+		5984EBBD29AC566A00599FD1 /* NavigationVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVar.swift; sourceTree = "<group>"; };
 		59F8EBAB28B5B50E008CDCB1 /* HexagonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonView.swift; sourceTree = "<group>"; };
 		59F8EBAD28B5BCA7008CDCB1 /* BlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobView.swift; sourceTree = "<group>"; };
 		59F8EBAF28B5D77E008CDCB1 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -53,6 +57,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5913F2E5296C059A00B34EAA /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				59F8EBAF28B5D77E008CDCB1 /* TabBar.swift */,
+				59FFF61028A600F6006AC10C /* ContentView.swift */,
+				5984EBBD29AC566A00599FD1 /* NavigationVar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		5913F2E6296C05B600B34EAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				59F8EBB528B5F35B008CDCB1 /* HomeView.swift */,
+				59FFF62328A61B63006AC10C /* AccountView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5913F2E7296C05C700B34EAA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				59F8EBAD28B5BCA7008CDCB1 /* BlobView.swift */,
+				59F8EBAB28B5B50E008CDCB1 /* HexagonView.swift */,
+				5984EBBB29AC548900599FD1 /* FeaturedItem.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5913F2E8296C06D700B34EAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59FFF62128A614F3006AC10C /* Styles.swift */,
+				59F8EBB128B5DD46008CDCB1 /* Tab.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		59FFF60228A600F6006AC10C = {
 			isa = PBXGroup;
 			children = (
@@ -74,14 +116,10 @@
 			children = (
 				59FFF62028A60359006AC10C /* Info.plist */,
 				59FFF60E28A600F6006AC10C /* DerislerApp.swift */,
-				59F8EBB528B5F35B008CDCB1 /* HomeView.swift */,
-				59FFF61028A600F6006AC10C /* ContentView.swift */,
-				59F8EBAF28B5D77E008CDCB1 /* TabBar.swift */,
-				59FFF62128A614F3006AC10C /* Styles.swift */,
-				59FFF62328A61B63006AC10C /* AccountView.swift */,
-				59F8EBAD28B5BCA7008CDCB1 /* BlobView.swift */,
-				59F8EBB128B5DD46008CDCB1 /* Tab.swift */,
-				59F8EBAB28B5B50E008CDCB1 /* HexagonView.swift */,
+				5913F2E6296C05B600B34EAA /* Views */,
+				5913F2E5296C059A00B34EAA /* Navigation */,
+				5913F2E7296C05C700B34EAA /* Components */,
+				5913F2E8296C06D700B34EAA /* Model */,
 				59FFF61E28A60345006AC10C /* UKIJTuT.ttf */,
 				59F8EBB328B5E00A008CDCB1 /* NotoKufiArabic-Regular.ttf */,
 				59FFF61C28A60328006AC10C /* UKIJQol_Tuz.ttf */,
@@ -178,8 +216,10 @@
 				59FFF62228A614F4006AC10C /* Styles.swift in Sources */,
 				59F8EBB228B5DD46008CDCB1 /* Tab.swift in Sources */,
 				59F8EBAE28B5BCA7008CDCB1 /* BlobView.swift in Sources */,
+				5984EBBE29AC566A00599FD1 /* NavigationVar.swift in Sources */,
 				59FFF61128A600F6006AC10C /* ContentView.swift in Sources */,
 				59FFF60F28A600F6006AC10C /* DerislerApp.swift in Sources */,
+				5984EBBC29AC548900599FD1 /* FeaturedItem.swift in Sources */,
 				59F8EBB028B5D77F008CDCB1 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

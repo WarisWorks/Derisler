@@ -1,13 +1,13 @@
 //
-//  HomeView.swift
+//  FeaturedItem.swift
 //  Derisler
 //
-//  Created by MaaS on 2022/08/24.
+//  Created by MaaS on 2023/02/27.
 //
 
 import SwiftUI
 
-struct HomeView: View {
+struct FeaturedItem: View {
     var body: some View {
         VStack(alignment: .trailing, spacing: 8) {
             Spacer()
@@ -56,12 +56,12 @@ struct HomeView: View {
                 .aspectRatio(contentMode:  .fit)
                 .frame(height: 250)
                 .offset(x: -32, y: -80)
-        )
+    )
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct FeaturedItem_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        FeaturedItem()
     }
 }
