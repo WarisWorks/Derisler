@@ -8,54 +8,36 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var hasScrolled = false
+
     var body: some View {
-        VStack(alignment: .trailing, spacing: 8) {
-            Spacer()
-            Image("Logo 2")
-                .resizable(resizingMode: .stretch)
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 26, height: 26)
-                .cornerRadius(10)
-                .padding(9)
-                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                .strokeStyle(cornerRadius: 16)
-            Text("ئەپ ئېچىش دەرسىلىكى")
-                .font(.custom("UKIJ Tuz Tom", size: 30))
-                .padding(.horizontal,20)
-                .foregroundStyle(.linearGradient(colors: [.primary, .primary.opacity(0.5)], startPoint: .topTrailing, endPoint: .bottomLeading))
+        ScrollView {
+            GeometryReader { proxy in
+//                Text("\(proxy.frame(in: .named("scroll")).minY)")
+                Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).maxY)
+            }
+            .frame(height: 0)
             
-            Text("دەسلەپكى قەدەم 3سائەت ئومۇمى چۈشەنچە")
-                .font(.custom("UKIJ Qolyazma Tuz", size: 18))
-                .foregroundStyle(.secondary)
-                .padding(.horizontal,20)
-            Text("ئەپ ئاچقۇچىلار ئۈچۈن تۈزۈلگەن تۇنجى دەرسىلىك")
-                .font(.custom("UKIJ Tuz Tom", size: 18))
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .foregroundColor(.secondary)
-                .padding(.horizontal,20)
-            //                    .offset(y: 10)
+            FeaturedItem()
             
+            Color.clear.frame(height: 1000)
         }
-        //            .multilineTextAlignment(.trailing)
-        .multilineTextAlignment(.trailing)
-        .padding(.vertical, 20)
-        .frame(height: 350)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
-        //            .cornerRadius(30)
-        //            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-        .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
-        .strokeStyle()
-        .padding(.horizontal, 20)
-        .background(
-            Image("Blob 1")
-                .offset(x: 250, y: -100)
-        )
+        .coordinateSpace(name: "scroll")
+        .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
+            withAnimation(.easeInOut) {
+                if value < 0 {
+                    hasScrolled = true
+                } else {
+                    hasScrolled = false
+                }
+            }
+        })
+        .safeAreaInset(edge: .top) {
+            Color.clear.frame(height: 70)
+        }
         .overlay(
-            Image("Illustration 5")
-                .resizable()
-                .aspectRatio(contentMode:  .fit)
-                .frame(height: 250)
-                .offset(x: -32, y: -80)
+            NavigationVar(title: "دەرىسلەر", hasScrolled: $hasScrolled)
+                
         )
     }
 }

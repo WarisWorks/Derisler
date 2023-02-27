@@ -34,6 +34,7 @@ struct FeaturedItem: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .foregroundColor(.secondary)
                 .padding(.horizontal,20)
+                
 //                    .offset(y: 10)
 
         }
