@@ -2,7 +2,7 @@
 //  Tab.swift
 //  Derisler
 //
-//  Created by MaaS on 2022/08/24.
+//  Created by Waris on 2022/08/24.
 //
 
 import SwiftUI

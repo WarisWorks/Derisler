@@ -2,7 +2,7 @@
 //  Course.swift
 //  Derisler
 //
-//  Created by MaaS on 2023/03/01.
+//  Created by Waris on 2023/03/01.
 //
 
 import SwiftUI

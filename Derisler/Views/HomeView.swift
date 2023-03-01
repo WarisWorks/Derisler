@@ -2,7 +2,7 @@
 //  HomeView.swift
 //  Derisler
 //
-//  Created by MaaS on 2022/08/24.
+//  Created by Waris on 2022/08/24.
 //
 
 import SwiftUI
@@ -26,15 +26,6 @@ struct HomeView: View {
                 Color.clear.frame(height: 1000)
             }
             .coordinateSpace(name: "scroll")
-            .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
-                withAnimation(.easeInOut) {
-                    if value < 0 {
-                        hasScrolled = true
-                    } else {
-                        hasScrolled = false
-                    }
-                }
-            })
             .safeAreaInset(edge: .top) {
                 Color.clear.frame(height: 70)
             }
@@ -52,6 +43,15 @@ struct HomeView: View {
             Color.clear.preference(key: ScrollPreferenceKey.self, value: proxy.frame(in: .named("scroll")).maxY)
         }
         .frame(height: 0)
+        .onPreferenceChange(ScrollPreferenceKey.self, perform: { value in
+            withAnimation(.easeInOut) {
+                if value < 0 {
+                    hasScrolled = true
+                } else {
+                    hasScrolled = false
+                }
+            }
+        })
     }
     
     var featured: some View{

@@ -2,7 +2,7 @@
 //  FeaturedItem.swift
 //  Derisler
 //
-//  Created by MaaS on 2023/02/27.
+//  Created by Waris on 2023/02/27.
 //
 
 import SwiftUI
