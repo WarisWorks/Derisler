@@ -16,15 +16,15 @@ struct MatchView: View {
             if !show {
                 VStack(alignment: .trailing, spacing: 12) {
                     Text(" SwiftUI ھەققىدە")
-                        .font(.custom("NotokufiArabic-Regular", size: 30))
+                        .font(.custom(mainfont, size: 30))
                         .matchedGeometryEffect(id: "title", in: namespace)
                         .frame(maxWidth: .infinity,alignment: .trailing)
                     Text("3سائەت 20 دەرس ")
-                        .font(.custom("NotokufiArabic-Regular", size: 16))
+                        .font(.custom(mainfont, size: 16))
                         .matchedGeometryEffect(id: "subtitle", in: namespace)
                     
                     Text("iOS 16 گە ئەپ قۇرۇش ۋە خاسلاشتۇرۇش")
-                        .font(.custom("NotokufiArabic-Regular", size: 16))
+                        .font(.custom(mainfont, size: 16))
                         .matchedGeometryEffect(id: "text", in: namespace)
 
                 }
@@ -38,15 +38,15 @@ struct MatchView: View {
                 VStack(alignment: .trailing, spacing: 12) {
                     Spacer()
                     Text(" SwiftUI ھەققىدە")
-                        .font(.custom("NotokufiArabic-Regular", size: 30))
+                        .font(.custom(mainfont, size: 30))
                         .matchedGeometryEffect(id: "title", in: namespace)
                         .frame(maxWidth: .infinity,alignment: .trailing)
                     Text("3سائەت 20 دەرس ")
-                        .font(.custom("NotokufiArabic-Regular", size: 16))
+                        .font(.custom(mainfont, size: 16))
                         .matchedGeometryEffect(id: "subtitle", in: namespace)
                     
                     Text("iOS 16 گە ئەپ قۇرۇش ۋە خاسلاشتۇرۇش")
-                        .font(.custom("NotokufiArabic-Regular", size: 16))
+                        .font(.custom(mainfont, size: 16))
                         .matchedGeometryEffect(id: "text", in: namespace)
                         .frame(maxWidth: .infinity,alignment: .trailing)
                     

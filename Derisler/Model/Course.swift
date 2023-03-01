@@ -22,3 +22,8 @@ var courses = [
     Course(title: "يېڭى ئۆگەنگۈچىلەر ئۈچۈن 3D", subtitle: "10سائەت - 45دەرس ", text: "ئۆزىڭىز ياقتۇرغان مودىللارنى ياساڭ", image: "Illustration 9", logo: "3D model"),
     Course(title: "Photoshopتىن ئومۇمى چۈشەنچە", subtitle: "16سائەت - 51دەرس ", text: "يېڭياچىدىن ئۇستاتقىچە", image: "Illustration 3", logo: "PS Logo")
 ]
+
+
+let mainfont = "NotoKufiArabic-Regular";
+let tuztom = "UKIJ Tuz Tom";
+let qolyazma = "UKIJ Qolyazma Tuz";
