@@ -19,7 +19,8 @@ struct NavigationVar: View {
                 .opacity(hasScrolled ? 1 : 0)
             
             Text(title)
-                .font(.custom("UKIJ Tuz Tom", size: 33))
+              //  .animatableFont(size: hasScrolled ? 22 : 34, weight: .bold)
+                .font(.custom("UKIJ Tuz Tom", size: hasScrolled ? 22 : 34))
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding(.trailing, 20)
                 .padding(.top, 20)
