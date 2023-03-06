@@ -21,6 +21,7 @@ struct FeaturedItem: View {
                 .padding(9)
                 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                 .strokeStyle(cornerRadius: 16)
+                .padding(.horizontal,20)
             Text(course.title)
                 .font(.custom("UKIJ Tuz Tom", size: 26))
                 .padding(.horizontal,20)

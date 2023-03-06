@@ -10,6 +10,7 @@ import SwiftUI
 struct AccountView: View {
     @State var isDeleted = false
     @State var isPinned = false
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView{
@@ -23,13 +24,15 @@ struct AccountView: View {
             }
             .listStyle(.insetGrouped)
             .navigationTitle("ئاكونت")
+            .navigationBarItems(leading: Button { presentationMode.wrappedValue.dismiss() } label: {
+                Text("تامام").font(.custom(tuztom, size: 16))})
             
             
         }
         // SwiftUI to be RTL + Plus
         .environment(\.locale, Locale(identifier: "ug"))
         .environment(\.layoutDirection, .rightToLeft)
-        .font(.custom("UKIJ Tuz Tom", size: 20))
+        .font(.custom(tuztom, size: 18))
         
     }
     
