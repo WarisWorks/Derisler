@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		593A5AA629B6BD8600D6B441 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A5AA529B6BD8600D6B441 /* ModalView.swift */; };
+		593A5AA829B6BE3100D6B441 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593A5AA729B6BE3100D6B441 /* SignInView.swift */; };
+		595871CD29B704D700C08D8D /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595871CC29B704D700C08D8D /* AvatarView.swift */; };
 		5984EBBC29AC548900599FD1 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984EBBB29AC548900599FD1 /* FeaturedItem.swift */; };
 		5984EBBE29AC566A00599FD1 /* NavigationVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984EBBD29AC566A00599FD1 /* NavigationVar.swift */; };
 		5984EBC229AC780900599FD1 /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984EBC129AC780900599FD1 /* PreferenceKeys.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		593A5AA529B6BD8600D6B441 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		593A5AA729B6BE3100D6B441 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		595871CC29B704D700C08D8D /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		5984EBBB29AC548900599FD1 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		5984EBBD29AC566A00599FD1 /* NavigationVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVar.swift; sourceTree = "<group>"; };
 		5984EBC129AC780900599FD1 /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
@@ -103,7 +109,7 @@
 				5984EBC829AF1A1F00599FD1 /* MatchView.swift */,
 				7774CEA129B0306D004CA9D4 /* CourseView.swift */,
 				7774CEA729B08E4B004CA9D4 /* SearchView.swift */,
-				7796155129B1939500F8EC20 /* SignUpView.swift */,
+				593A5AA929B6C3C600D6B441 /* Modals */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +121,7 @@
 				59F8EBAB28B5B50E008CDCB1 /* HexagonView.swift */,
 				5984EBBB29AC548900599FD1 /* FeaturedItem.swift */,
 				7774CE9F29B02EE1004CA9D4 /* CourseItem.swift */,
+				595871CC29B704D700C08D8D /* AvatarView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -129,6 +136,16 @@
 				7774CEAB29B0CA57004CA9D4 /* Suggestion.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		593A5AA929B6C3C600D6B441 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				7796155129B1939500F8EC20 /* SignUpView.swift */,
+				593A5AA529B6BD8600D6B441 /* ModalView.swift */,
+				593A5AA729B6BE3100D6B441 /* SignInView.swift */,
+			);
+			path = Modals;
 			sourceTree = "<group>";
 		};
 		5984EBC529AEE74D00599FD1 /* Styles */ = {
@@ -229,6 +246,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ug,
 			);
 			mainGroup = 59FFF60228A600F6006AC10C;
 			productRefGroup = 59FFF60C28A600F6006AC10C /* Products */;
@@ -268,11 +286,13 @@
 				59FFF62428A61B63006AC10C /* AccountView.swift in Sources */,
 				7774CEAC29B0CA57004CA9D4 /* Suggestion.swift in Sources */,
 				59F8EBAC28B5B50E008CDCB1 /* HexagonView.swift in Sources */,
+				595871CD29B704D700C08D8D /* AvatarView.swift in Sources */,
 				59FFF62228A614F4006AC10C /* Styles.swift in Sources */,
 				59F8EBB228B5DD46008CDCB1 /* Tab.swift in Sources */,
 				59F8EBAE28B5BCA7008CDCB1 /* BlobView.swift in Sources */,
 				7796155429B1B8F300F8EC20 /* AngularButtonStyle.swift in Sources */,
 				5984EBBE29AC566A00599FD1 /* NavigationVar.swift in Sources */,
+				593A5AA829B6BE3100D6B441 /* SignInView.swift in Sources */,
 				59FFF61128A600F6006AC10C /* ContentView.swift in Sources */,
 				5984EBC729AEF1ED00599FD1 /* Course.swift in Sources */,
 				59FFF60F28A600F6006AC10C /* DerislerApp.swift in Sources */,
@@ -285,6 +305,7 @@
 				7774CEA629B063ED004CA9D4 /* Model.swift in Sources */,
 				59F8EBB028B5D77F008CDCB1 /* TabBar.swift in Sources */,
 				5984EBC429AEE73E00599FD1 /* AnimatableFontModifier.swift in Sources */,
+				593A5AA629B6BD8600D6B441 /* ModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Derisler/Preview Content\"";
@@ -430,6 +452,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.Derisler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -441,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Derisler/Preview Content\"";
@@ -461,6 +485,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.Derisler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

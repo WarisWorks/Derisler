@@ -10,7 +10,9 @@ import SwiftUI
 struct AccountView: View {
     @State var isDeleted = false
     @State var isPinned = false
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) var dismiss
+    @AppStorage("isLogged") var isLogged = false
+
     
     var body: some View {
         NavigationView{
@@ -21,10 +23,19 @@ struct AccountView: View {
                 menu
                 
                 links
+                
+                Button {
+                    isLogged = false
+                    dismiss()
+                } label: {
+                    Text("چېكىنىپ چىقىش")
+                }
+                .font(.custom(tuztom, size: 16))
+                .tint(.red)
             }
             .listStyle(.insetGrouped)
             .navigationTitle("ئاكونت")
-            .navigationBarItems(leading: Button { presentationMode.wrappedValue.dismiss() } label: {
+            .navigationBarItems(leading: Button { dismiss() } label: {
                 Text("تامام").font(.custom(tuztom, size: 16))})
             
             
