@@ -12,13 +12,22 @@ struct ExploreView: View {
         ZStack {
             Color("Background").ignoresSafeArea()
             
-             coursesSection
-            .safeAreaInset(edge: .top){
-                Color.clear.frame(height: 70)
+            ScrollView {
+                coursesSection
+                
+                Text("ئاۋات")
+                
+                handbooksSection
             }
-            .overlay(NavigationBar(title: "يېقىنقى", hasScrolled: .constant(true)))
+           
+                
+                .safeAreaInset(edge: .top){
+                    Color.clear.frame(height: 70)
+                }
+                .overlay(NavigationBar(title: "يېقىنقى", hasScrolled: .constant(true)))
 
             .background(Image("Blob 1").offset(x: -100, y: -400))
+            
         }
     }
     
@@ -32,6 +41,16 @@ struct ExploreView: View {
             .padding(.horizontal, 20)
             Spacer()
         }
+    }
+    
+    var handbooksSection: some View{
+        HStack{
+            ForEach(handbooks){ handbook in
+                HandBookItem(handbook: handbook)
+                
+            }
+        }
+        .padding(.horizontal, 20)
     }
 }
 

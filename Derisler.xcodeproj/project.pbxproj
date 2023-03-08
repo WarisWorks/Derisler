@@ -20,6 +20,8 @@
 		5967C63C29B87A37009071B9 /* PlayShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5967C63B29B87A37009071B9 /* PlayShape.swift */; };
 		5967C63E29B87D40009071B9 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5967C63D29B87D40009071B9 /* ExploreView.swift */; };
 		5967C64029B8805D009071B9 /* SmallCourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5967C63F29B8805D009071B9 /* SmallCourseItem.swift */; };
+		5967C64229B8862A009071B9 /* HandBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5967C64129B8862A009071B9 /* HandBook.swift */; };
+		5967C64429B887DD009071B9 /* HandBookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5967C64329B887DD009071B9 /* HandBookItem.swift */; };
 		5984EBBC29AC548900599FD1 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984EBBB29AC548900599FD1 /* FeaturedItem.swift */; };
 		5984EBBE29AC566A00599FD1 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984EBBD29AC566A00599FD1 /* NavigationBar.swift */; };
 		5984EBC229AC780900599FD1 /* PreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5984EBC129AC780900599FD1 /* PreferenceKeys.swift */; };
@@ -66,6 +68,8 @@
 		5967C63B29B87A37009071B9 /* PlayShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayShape.swift; sourceTree = "<group>"; };
 		5967C63D29B87D40009071B9 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		5967C63F29B8805D009071B9 /* SmallCourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCourseItem.swift; sourceTree = "<group>"; };
+		5967C64129B8862A009071B9 /* HandBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBook.swift; sourceTree = "<group>"; };
+		5967C64329B887DD009071B9 /* HandBookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandBookItem.swift; sourceTree = "<group>"; };
 		5984EBBB29AC548900599FD1 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		5984EBBD29AC566A00599FD1 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		5984EBC129AC780900599FD1 /* PreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKeys.swift; sourceTree = "<group>"; };
@@ -131,7 +135,6 @@
 				5967C63729B870D9009071B9 /* SectionView.swift */,
 				7774CEA729B08E4B004CA9D4 /* SearchView.swift */,
 				593A5AA929B6C3C600D6B441 /* Modals */,
-				5967C63D29B87D40009071B9 /* ExploreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				5967C63529B86DDF009071B9 /* SectionRow.swift */,
 				5967C63929B8791E009071B9 /* PlayView.swift */,
 				5967C63F29B8805D009071B9 /* SmallCourseItem.swift */,
+				5967C64329B887DD009071B9 /* HandBookItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -163,6 +167,7 @@
 				5967C62D29B836B1009071B9 /* Address.swift */,
 				5967C62F29B848E8009071B9 /* Coin.swift */,
 				5967C63329B86CA8009071B9 /* CourseSection.swift */,
+				5967C64129B8862A009071B9 /* HandBook.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 		593A5AA929B6C3C600D6B441 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				5967C63D29B87D40009071B9 /* ExploreView.swift */,
 				7796155129B1939500F8EC20 /* SignUpView.swift */,
 				593A5AA529B6BD8600D6B441 /* ModalView.swift */,
 				593A5AA729B6BE3100D6B441 /* SignInView.swift */,
@@ -313,6 +319,7 @@
 				59F8EBB628B5F35B008CDCB1 /* HomeView.swift in Sources */,
 				5967C63829B870D9009071B9 /* SectionView.swift in Sources */,
 				5984EBC929AF1A1F00599FD1 /* MatchView.swift in Sources */,
+				5967C64429B887DD009071B9 /* HandBookItem.swift in Sources */,
 				5967C63A29B8791E009071B9 /* PlayView.swift in Sources */,
 				7774CEA229B0306D004CA9D4 /* CourseView.swift in Sources */,
 				59FFF62428A61B63006AC10C /* AccountView.swift in Sources */,
@@ -332,6 +339,7 @@
 				5967C63429B86CA8009071B9 /* CourseSection.swift in Sources */,
 				5967C63029B848E8009071B9 /* Coin.swift in Sources */,
 				59FFF61128A600F6006AC10C /* ContentView.swift in Sources */,
+				5967C64229B8862A009071B9 /* HandBook.swift in Sources */,
 				5984EBC729AEF1ED00599FD1 /* Course.swift in Sources */,
 				59FFF60F28A600F6006AC10C /* DerislerApp.swift in Sources */,
 				7774CEA029B02EE1004CA9D4 /* CourseItem.swift in Sources */,
