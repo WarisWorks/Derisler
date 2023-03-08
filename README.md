@@ -1,3 +1,3 @@
 # Derisler
 
-![ios15](https://user-images.githubusercontent.com/109949736/221464365-6a60e526-650c-4219-b421-4dc64b0e7b05.gif)
+![Screen](https://user-images.githubusercontent.com/109949736/223667338-c2d1bc41-d72b-4721-8300-ba17bcb419f1.gif)

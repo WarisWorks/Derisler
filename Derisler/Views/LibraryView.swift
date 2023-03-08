@@ -1,5 +1,5 @@
 //
-//  ExploreView.swift
+//  LibraryView.swift
 //  Derisler
 //
 //  Created by Waris on 2023/03/08.
@@ -7,12 +7,31 @@
 
 import SwiftUI
 
-struct ExploreView: View {
+struct LibraryView: View {
     var body: some View {
         ZStack {
             Color("Background").ignoresSafeArea()
             
             ScrollView {
+                
+                CertificateView()
+                     .frame(height: 220)
+                     .background(
+                         RoundedRectangle(cornerRadius: 30, style: .continuous)
+                             .fill(.linearGradient(colors: [.blue, .green], startPoint: .topTrailing, endPoint: .leading))
+                             .padding(20)
+                             .offset(y: -30)
+                     )
+                     .background(
+                         RoundedRectangle(cornerRadius: 30, style: .continuous)
+                             .fill(.linearGradient(colors: [.teal, .orange], startPoint: .topTrailing, endPoint: .leading))
+                             .padding(40)
+                             .offset(y: -60)
+                     )
+                     .padding(20)
+                Text("ئىزلىرىم")
+                    .titleStyle()
+                
                 coursesSection
                 
                 Text("تەربىيلەپ چىقىردىغىنىمىز")
@@ -20,18 +39,15 @@ struct ExploreView: View {
                 
                 topicsSection
                 
-                Text("ئاۋات")
-                    .titleStyle()
                
-                
-                handbooksSection
+             
             }
            
                 
                 .safeAreaInset(edge: .top){
                     Color.clear.frame(height: 70)
                 }
-                .overlay(NavigationBar(title: "يېقىنقى", hasScrolled: .constant(true)))
+                .overlay(NavigationBar(title: "گۇۋاھنامىلىرىم", hasScrolled: .constant(true)))
 
             .background(Image("Blob 1").offset(x: -100, y: -400))
             
@@ -50,15 +66,7 @@ struct ExploreView: View {
         }
     }
     
-    var handbooksSection: some View{
-        HStack{
-            ForEach(handbooks){ handbook in
-                HandBookItem(handbook: handbook)
-                
-            }
-        }
-        .padding(.horizontal, 20)
-    }
+
     
     var topicsSection: some View{
         VStack {
@@ -73,8 +81,8 @@ struct ExploreView: View {
     }
 }
 
-struct ExploreView_Previews: PreviewProvider {
+struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
-        ExploreView()
+        LibraryView()
     }
 }

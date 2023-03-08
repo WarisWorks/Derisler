@@ -2,7 +2,7 @@
 //  SectionView.swift
 //  Derisler
 //
-//  Created by MaaS on 2023/03/08.
+//  Created by Waris on 2023/03/08.
 //
 
 import SwiftUI

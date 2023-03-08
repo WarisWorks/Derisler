@@ -7,6 +7,23 @@
 
 import SwiftUI
 
+struct TitleModifier: ViewModifier{
+    func body(content: Content) -> some View {
+        content
+            .font(.custom(tuztom, size: 20))
+            .foregroundColor(.secondary)
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            .padding(20)
+            .accessibilityAddTraits(.isHeader)
+    }
+}
+
+extension View {
+   func titleStyle() -> some View{
+        modifier(TitleModifier())
+    }
+}
+
 struct StrokeModifier: ViewModifier {
     var cornerRadius: CGFloat
     @Environment(\.colorScheme) var colorScheme

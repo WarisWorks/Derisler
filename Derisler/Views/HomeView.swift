@@ -124,6 +124,7 @@ struct HomeView: View {
                             showCourse = true
                             selectedIndex = index
                         }
+                        .accessibilityElement(children: .combine)
                     
                     
                     // Text("\(proxy.frame(in: .global).maxX)")
@@ -136,6 +137,7 @@ struct HomeView: View {
         .background(
             Image("Blob 1")
                 .offset(x: 250, y: -100)
+                .accessibility(hidden: true)
         )
         .sheet(isPresented: $showCourse) {
             CourseView(namespace: namespace, course: featuredCourses[selectedIndex], show: $showCourse)
@@ -153,6 +155,9 @@ struct HomeView: View {
                         selectedID = course.id
                     }
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityAddTraits(.isButton)
+
         }
     }
     var detail: some View{
