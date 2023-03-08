@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigationVar: View {
+struct NavigationBar: View {
     var title = ""
     @Binding var hasScrolled: Bool
     @State var showSearch = false
@@ -76,6 +76,6 @@ struct NavigationVar: View {
 
 struct NavigationVar_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationVar(title: "ئىقتىدارلىرى", hasScrolled: .constant(false))
+        NavigationBar(title: "ئىقتىدارلىرى", hasScrolled: .constant(false))
     }
 }

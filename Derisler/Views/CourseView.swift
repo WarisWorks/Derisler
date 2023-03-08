@@ -15,6 +15,8 @@ struct CourseView: View {
     @EnvironmentObject var model: Model
     @State var viewState: CGSize = .zero
     @State var isDraggable = true
+    @State var showSection = false
+    @State var selectedIndex = 0
     
     var body: some View {
         ZStack {
@@ -99,18 +101,22 @@ struct CourseView: View {
     }
     
     var content: some View{
-        VStack(alignment: .trailing, spacing: 30){
-            Text("ئالمىنىڭ كۆچمە سۇپىسىغا ئەپ ئېچىش")
-                .font(.custom(mainfont, size: 18))
-            Text("كۇرس ھەققىدە")
-                .font(.custom(mainfont, size: 22))
-            Text("SwiftUI سىزنىڭ Swift نىڭ كۈچى بىلەن بارلىق ئالما سۇپىلىرىدا ئېسىل كۆرۈنىدىغان ئەپلەرنى قۇرۇپ چىقىشىڭىزغا ياردەم بېرىدۇ. سىز پەقەت بىر يۈرۈش قورال ۋە API لارنى ئىشلىتىپ ، ھەر قانداق ئالما ئۈسكۈنىسىدە كۆپچىلىككە تېخىمۇ ياخشى تەجرىبە ئېلىپ كېلەلەيسىز.")
-            Text("پروگراممىڭىزنىڭ يول باشلاش ھەرىكىتىنى پروگرامما خاراكتېرلىك كونترول قىلىپ ، ئۇنىڭ قوزغىلىش ھالىتىنى بەلگىلەڭ ، چوڭ-كىچىك سىنىپلار ئارا ئۆتكۈنچى باسقۇچنى باشقۇرۇڭ ، چوڭقۇر ئۇلىنىشلارغا جاۋاب قايتۇرۇڭ.كىچىك قوراللىرىڭىزنى SwiftUI ئارقىلىق قۇلۇپ ئېكرانىدا قالتىس كۆرسىتىڭ. چىرايلىق سىنبەلگە ، ئۆلچەش ئەسۋابى ۋە باشقا ئېلېمېنتلارنى تۈزۈپ ، ئابونتلىرىڭىزغا بىر قاراپلا تېز ئۇچۇر بېرىدۇ.")
-                .font(.custom(mainfont, size: 16))
-            Text("SwiftUI باياننامە گرامماتىكىسىنى ئىشلىتىدۇ ، شۇڭا ئىشلەتكۈچى كۆرۈنمە يۈزىنىڭ نېمە قىلىشى كېرەكلىكىنى ئاددىيلا بايان قىلالايسىز. مەسىلەن ، سىز تېكىست ساھەسىدىن تەركىب تاپقان تۈرلەرنىڭ تىزىملىكىنى خالايدىغانلىقىڭىزنى يازالايسىز ، ئاندىن ھەر بىر ساھەنىڭ توغرىلىنىشى ، خەت نۇسخىسى ۋە رەڭگىنى تەسۋىرلەڭ. كودىڭىز ئىلگىرىكىگە قارىغاندا ئاددىي ۋە ئوقۇش ئاسان بولۇپ ، ۋاقىت ۋە ئاسراشنى تېجەيدۇ.")
-                .font(.custom(mainfont, size: 16))
+        VStack(alignment: .trailing){
+            ForEach(Array(courseSections.enumerated()), id: \.offset){ index, section in
+                if index != 0 {Divider()}
+                SectionRow(section: section)
+                    .onTapGesture {
+                        selectedIndex = index
+                        showSection = true
+                    }
+            }
         }
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
+        .strokeStyle(cornerRadius: 30)
         .padding(20)
+        .sheet(isPresented: $showSection){
+            SectionView(section: courseSections[selectedIndex])
+        }
         .multilineTextAlignment(.trailing)
     }
     
